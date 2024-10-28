@@ -1,0 +1,12 @@
+10 table
+
+auth 6
+    auth_user
+django 4
+    django_migrations
+    django_session
+    django_content_type
+    id, app_label, model
+
+https://docs.djangoproject.com/en/5.1/ref/models/options/
+

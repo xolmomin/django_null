@@ -8,5 +8,34 @@ django 4
     django_content_type
     id, app_label, model
 
-https://docs.djangoproject.com/en/5.1/ref/models/options/
 
+
+Task
+1. https://docs.djangoproject.com/en/5.1/ref/models/fields/
+2. https://docs.djangoproject.com/en/5.1/ref/models/options/
+3. base64 image database saqlash
+4. base64 image in html
+
+
+
+https://api.telegram.org/bot{TOKEN}/setWebhook?url=https://sarvar.fil.uz/webhook
+
+
+server {
+    server_name  sarvar.fil.uz;
+
+    location / {
+        proxy_set_header Host \$http_host;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+        proxy_redirect off;
+        proxy_buffering off;
+        proxy_pass http://127.0.0.1:8080;
+    }
+
+
+}
+
+http://sarvar.fil.uz
+https://sarvar.fil.uz
+
+certbot -d sarvar.fil.uz

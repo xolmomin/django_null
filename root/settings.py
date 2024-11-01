@@ -17,6 +17,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'apps.apps.AppsConfig',
+    'django_jsonform',
+
 ]
 
 MIDDLEWARE = [

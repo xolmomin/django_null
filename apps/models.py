@@ -1,26 +1,40 @@
+from keyword import kwlist
+
 from django.contrib.auth.models import AbstractUser
-from django.core.exceptions import ValidationError
-from django.db import models
-from django.db.models import CharField, Model, IntegerField, Manager, ForeignKey, CASCADE, AutoField, BigAutoField, \
-    BinaryField
+from django.db.models import CharField, Model, SlugField
+from django.utils.text import slugify
 
 
 class User(AbstractUser):
-
-    def save(self, *args, **kwargs):
-        if 'botir' in self.username.lower():
-            raise ValidationError('Username atmen!')
-
-        super().save(*args, **kwargs)
+    pass
 
 
 class Product(Model):
-    # quantity = AutoField() # SERIAL
-    number = BigAutoField(primary_key=True)  # SERIAL
-    image = BinaryField()
+    ITEMS_SCHEMA = {
+        'type': 'dict',  # a list which will contain the items
+        'keys': {  # or 'properties'
+            'size': {
+                'type': 'number'
+            },
+            'color': {
+                'type': 'string'
+            },
+            'storage': {
+                'type': 'string'
+            }
+        },
+        'required': ['size', 'color']
+    }
 
-    class Meta:
-        db_tablespace = 'valijon_tablespace'
+    name = CharField(max_length=255)
+    slug = SlugField(editable=False, null=True, blank=True)
+
+    def save(self, *args, init_id=None, **kwargs):
+        self.slug = slugify(self.name)
+        if not init_id:
+            self.save(*args, init_id=True, **kwargs)
+            self.slug += f"-{self.id}"
+        super().save(*args, **kwargs)
 
 # class BaseMetaMixin:
 #     class Meta:

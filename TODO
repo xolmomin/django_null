@@ -2,9 +2,9 @@
 Task
 1. https://docs.djangoproject.com/en/5.1/ref/models/fields/
 2. https://docs.djangoproject.com/en/5.1/ref/models/options/
-3. base64 image database saqlash
-4. base64 image in html
 
+3. ForeignKey, OneToOneField, ManyToManyField
+GenericForeignKey
 
 
 JSONField, SlugField, URLField, UUIDField, TimeField, DurationField,
@@ -39,4 +39,3 @@ category, product 2lasi ham uuid ishlatilsin (id degan field bolmaydi)
 database ga toshkent vaqti saqlasin
 
 
-6.

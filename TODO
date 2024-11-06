@@ -3,9 +3,20 @@ Task
 1. https://docs.djangoproject.com/en/5.1/ref/models/fields/
 2. https://docs.djangoproject.com/en/5.1/ref/models/options/
 
+
 3. ForeignKey, OneToOneField, ManyToManyField
 GenericForeignKey
 
+
+#takrorlash
+django async
+models (https://docs.djangoproject.com/en/5.1/ref/models/fields/#field-options)
+admin
+
+serializer
+drf
+signals
+pytest, unittest
 
 JSONField, SlugField, URLField, UUIDField, TimeField, DurationField,
 DateField, DateTimeField
@@ -37,5 +48,14 @@ category, product 2lasi ham uuid ishlatilsin (id degan field bolmaydi)
 
 5. TimeField
 database ga toshkent vaqti saqlasin
+
+
+6. DateTimeField
+database ga toshkent vaqti saqlasin
+
+
+* * * * * cd /var/www/backup && docker exec -itu postgres b183f5314ecb bash -c pg_dump -h 16.26.95.1 -d tez_yetkaz -F tar -f > tez_yetkaz.tar
+
+
 
 

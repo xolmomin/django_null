@@ -10,14 +10,14 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'apps.apps.AppsConfig',
-    'django_jsonform',
+    'apps.apps.AppsConfig'
 ]
 
 MIDDLEWARE = [
@@ -50,6 +50,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "root.wsgi.application"
+ASGI_APPLICATION = "root.asgi.application"
 
 DATABASES = {
     "default": {

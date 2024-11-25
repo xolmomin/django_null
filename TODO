@@ -1,8 +1,4 @@
 
-https://docs.djangoproject.com/en/5.1/ref/models/querysets/#as-manager
-manager
-queryset
-django async
 
 #takrorlash
 admin
@@ -14,11 +10,12 @@ pytest, unittest
 
 
 
-nginx, gunicorn(service), django
-daphne(service)
 
-gunicorn
-uvicorn
-daphne
+1project 1-db
+user(username, password, telegram, location)
+2project 2-db
+user(username, password, age, address)
 
-uvicorn root.asgi:application
+
+task
+2ta projectda 1ta modelni ishlatish (save qilish) db 2ta boladi

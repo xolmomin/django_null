@@ -10,7 +10,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -50,12 +49,19 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "root.wsgi.application"
-ASGI_APPLICATION = "root.asgi.application"
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "django_null_db",
+        "NAME": "django_1",
+        "USER": "postgres",
+        "PASSWORD": "1",
+        "HOST": "localhost",
+        "PORT": "5432"
+    },
+    "second_db": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "django_2",
         "USER": "postgres",
         "PASSWORD": "1",
         "HOST": "localhost",

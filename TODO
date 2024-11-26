@@ -11,11 +11,24 @@ pytest, unittest
 
 
 
-1project 1-db
-user(username, password, telegram, location)
-2project 2-db
-user(username, password, age, address)
-
-
 task
-2ta projectda 1ta modelni ishlatish (save qilish) db 2ta boladi
+1.
+
+product owner i sifati user model bog'laymiz,
+user score qo'shamiz
+
+user lar api listi chiqarish kk
+
+[
+    {
+        'id': 1,
+        'username': 'admin',
+        'product_count': 4,
+        'level': 'hard',
+        'product_categories': ['texnika', 'meva'],
+        'score': 150
+        # agar 89dan baland bolsa hard,
+        # 76dan baland bolsa medium,
+        # 76dan kichik easy
+    }
+]

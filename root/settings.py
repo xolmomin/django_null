@@ -59,14 +59,6 @@ DATABASES = {
         "PASSWORD": "1",
         "HOST": "localhost",
         "PORT": "5432"
-    },
-    "second_db": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "django_2",
-        "USER": "postgres",
-        "PASSWORD": "1",
-        "HOST": "localhost",
-        "PORT": "5432"
     }
 }
 

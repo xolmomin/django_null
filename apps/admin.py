@@ -1,10 +1,15 @@
 from django.contrib import admin
 
-from apps.models import Product
+from apps.models import Product, ProductImage
+
+
+class ProductStackedInline(admin.StackedInline):
+    model = ProductImage
+    extra = 0
+    min_num = 1
+    max_num = 8
 
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    def save_model(self, request, obj, form, change):
-        # obj.price += 1000
-        obj.save()
+class ProductModelAdmin(admin.ModelAdmin):
+    inlines = ProductStackedInline,

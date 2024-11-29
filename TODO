@@ -11,23 +11,14 @@ pytest, unittest
 
 
 
-task
+film(title, released_date), genre (name)
 
-product owner i sifati user model bog'laymiz,
-user score qo'shamiz
 
-user lar api listi chiqarish kk
+api film
+name
+genre (nta kiritish mumkin)
 
-[
-    {
-        'id': 1,
-        'username': 'admin',
-        'product_count': 4,
-        'level': 'hard',
-        'product_categories': ['texnika', 'meva'],
-        'score': 150
-        # agar 89dan baland bolsa hard,
-        # 76dan baland bolsa medium,
-        # 76dan kichik easy
-    }
-]
+
+
+
+
